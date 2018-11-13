@@ -1,6 +1,6 @@
 package com.epam.demo.task;
 
-import com.epam.task.SumTask;
+import com.epam.task.SubTask;
 import com.epam.task.Task;
 import com.epam.util.ThreadUtils;
 import com.hazelcast.core.IQueue;
@@ -18,7 +18,7 @@ public class TaskProvider {
             ThreadUtils.sleepUnsafe(1000);
             LOGGER.info("Pushing event to queue...");
             Random random = new Random();
-            events.add(new SumTask(random.nextInt(10), random.nextInt(10)));
+            events.add(new SubTask(random.nextInt(10), random.nextInt(10)));
         }
     }
 

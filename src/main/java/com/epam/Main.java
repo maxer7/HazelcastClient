@@ -14,14 +14,19 @@ public class Main {
 
         HazelcastInstance hazelcastInstance = HazelcastClient.newHazelcastClient(ConfigProvider.getDefaultClientConfig());
 
+        // 1 consume map
 //        new MapConsumerDemo().show(hazelcastInstance.getMap("demoMap"));
 
+        // 2 lock demo
 //        new LockDemo().show(hazelcastInstance.getLock("demoLock"));
 
+        // 3 topic demo
 //        new TopicDemo().show(hazelcastInstance.getTopic("demoTopic"));
-//
+
+        // 4 executor demo
 //        new ExecutorDemo().show(hazelcastInstance.getExecutorService("demoExecutor"));
-//
+
+        // final demo
 //        new TaskProvider().provide(hazelcastInstance.getQueue("demoQueue"));
     }
 
