@@ -6,15 +6,9 @@ import com.hazelcast.config.Config;
 
 public class ConfigProvider {
 
-    public static Config getDefaultConfig() {
-        Config config = new Config();
-        config.setProperty("hazelcast.logging.type", "slf4j");
-        return config;
-    }
-
     public static ClientConfig getDefaultClientConfig() {
         ClientConfig clientConfig = new ClientConfig();
-        //enableUserCodeDeployment(clientConfig, "com.epam.event.EventImpl2");
+//        enableUserCodeDeployment(clientConfig, "com.epam.task.DivideTask");
         return clientConfig;
     }
 
