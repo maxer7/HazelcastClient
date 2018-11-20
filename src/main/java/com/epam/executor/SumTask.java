@@ -9,11 +9,10 @@ import org.slf4j.LoggerFactory;
 import java.io.Serializable;
 
 
-public class SumTask implements Runnable, Serializable, HazelcastInstanceAware {
+public class SumTask implements Runnable, Serializable {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SumTask.class);
 
-    private HazelcastInstance hazelcastInstance;
     private int id;
     private int x;
     private int y;
@@ -28,11 +27,6 @@ public class SumTask implements Runnable, Serializable, HazelcastInstanceAware {
     public void run() {
         ThreadUtils.sleepUnsafe(1000);
         LOGGER.info("Task id {}. Result {} + {} = {}", id, x, y, x + y);
-    }
-
-    @Override
-    public void setHazelcastInstance(HazelcastInstance hazelcastInstance) {
-        this.hazelcastInstance = hazelcastInstance;
     }
 
 }

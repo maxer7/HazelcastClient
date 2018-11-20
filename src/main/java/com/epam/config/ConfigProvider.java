@@ -8,7 +8,6 @@ public class ConfigProvider {
 
     public static ClientConfig getDefaultClientConfig() {
         ClientConfig clientConfig = new ClientConfig();
-//        enableUserCodeDeployment(clientConfig, "com.epam.task.DivideTask");
         return clientConfig;
     }
 

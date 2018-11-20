@@ -12,10 +12,10 @@ public class MapConsumerDemo {
     private static final Logger LOGGER = LoggerFactory.getLogger(MapConsumerDemo.class);
 
     public void show(IMap<Long, Long> map) {
-        Stream.iterate(0, (i) -> ++i)
+        Stream.iterate(0L, (i) -> ++i)
             .forEach(i -> {
                 LOGGER.info("Get by key {}. Value is {} ", i, map.get(i));
-                ThreadUtils.sleepUnsafe(1000);
+                ThreadUtils.sleepUnsafe(100);
             });
     }
 
